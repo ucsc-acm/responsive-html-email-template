@@ -3,11 +3,65 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Simple Transactional Email</title>
+    <title>ACM - UCSC Student Chapter</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
       ------------------------------------- */
+      .center {
+        text-align: center;
+        width: 100%;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 28px;
+        background-color: #58A9D6;
+        color: white;
+      }
+      .divider {
+        box-sizing: border-box;
+        position:relative;
+        text-align: center;
+        background-image: url("acm.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px;
+        font-size:0;
+        height: 40px;
+      }
+      .divider::before, .divider::after {
+          box-sizing: border-box;
+          width: 40%;
+          height: 1px;
+          border-top: 1px solid #c8c8c8;
+          display: inline-block;
+          content:'';
+          margin-left: 5%;
+          margin-right: 5%;
+          position:relative;
+            top: 50%;
+          -moz-transform: translatey(-50%);
+          -ms-transform: translatey(-50%);
+          -o-transform: translatey(-50%);
+          -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+      }
+      .vertical-helper {
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+      }
+      #dividing-img {
+        max-height: 80px;
+        vertical-align: middle;
+      }
+      #signature-img {
+        max-height: 14px;
+        vertical-align: middle;
+      }
+      #ending-img {
+        max-height: 600px;
+      }
       img {
         border: none;
         -ms-interpolation-mode: bicubic;
@@ -115,8 +169,8 @@
         font-family: sans-serif;
         font-size: 14px;
         font-weight: normal;
-        margin: 0;
-        Margin-bottom: 15px; }
+        margin: 8px 0 8px 0;
+        }
         p li,
         ul li,
         ol li {
@@ -282,7 +336,7 @@
           <div class="content">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+            <span class="preheader">ACM - UCSC Student Chapter</span>
             <table class="main">
 
               <!-- START MAIN CONTENT AREA -->
@@ -291,25 +345,27 @@
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Hi there,</p>
-                        <p>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
-                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                          <tbody>
-                            <tr>
-                              <td align="left">
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td> <a href="http://htmlemail.io" target="_blank">Call To Action</a> </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p>This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p>Good luck! Hope it works.</p>
+                        <h3 class="title center">
+                          <!-- TITLE --> 
+                          The Moon Landing
+                        </h3>
+                        <p>Dear ACM,</p>
+                        <p> <!-- OVERVIEW --> 
+                          Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Accusamus cum asperiores fugiat at magni iusto, ipsum <i>assumenda exercitationem</i> non aperiam quia cumque molestiae?
+                        </p>
+                        <div class="divider"></div>
+
+                        <p><!-- DETAIL --> 
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere quasi fugiat voluptatem, quibusdam veritatis <b>eligendi error facilis</b> esse eveniet nihil, obcaecati iure omnis consectetur architecto cum quos nam. Deserunt, natus?
+                        </p>
+                        <p> <!-- SIGNATURE -->
+                          <span class="vertical-helper"></span>
+                          UCSC ACM Board
+                          <img id="signature-img" src="slug.png" alt="">
+                        </p>
+                        <div class="center">
+                            <img id="ending-img" src="meme.jpg" alt="">
+                        </div>
                       </td>
                     </tr>
                   </table>
@@ -324,13 +380,13 @@
               <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
+                    <span class="apple-link">Contact us at <a href="mailto:acm@ucsc.edu">acm@ucsc.edu</a> for questions, concerns, and suggestions</span>
+                    <br>To unsubscribe <a href="mailto:acm@ucsc.edu">email us back</a>.
                   </td>
                 </tr>
                 <tr>
                   <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail</a>.
+                    <a target="_blank" href="https://ucscacm.org">ACM - UCSC Student Chapter</a>
                   </td>
                 </tr>
               </table>
